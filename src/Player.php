@@ -36,7 +36,7 @@ class Player
     }
 
     public function score(){
-        return $this->code[$this->score];
+        return $this->code[$this->points];
     }
 
     public function name()
