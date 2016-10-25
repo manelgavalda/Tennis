@@ -16,17 +16,18 @@ class Player
     ];
     protected $score;
 
+    //constructor?
     protected $points;
     protected $name;
 
     /**
      * Player constructor.
-     * @param $score
+     * @param $points
      * @param $name
      */
-    public function __construct($score, $name)
+    public function __construct($points, $name)
     {
-        $this->score = $score;
+        $this->points = $points;
         $this->name = $name;
     }
 

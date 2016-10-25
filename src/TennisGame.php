@@ -48,7 +48,7 @@ class TennisGame
      */
     public function tie()
     {
-        return $this->player1->points() > 3 || $this->player1->points() > 3;
+        return $this->player1->points() > 3 || $this->player2->points() > 3;
     }
 
     /**
