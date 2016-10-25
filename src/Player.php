@@ -16,7 +16,7 @@ class Player
     ];
     protected $score;
 
-    protected $points=0;
+    protected $points;
     protected $name;
 
     /**
