@@ -112,7 +112,7 @@ class TennisGameSpec extends ObjectBehavior
         $this->player2->winpoint();
         $this->player2->winpoint();
         $this->player2->winpoint();
-        $this->score()->shouldReturn("Avatatge Maria");
+        $this->score()->shouldReturn("Avantatge Maria");
     }
 
     function it_score_avantatge_player2(){
@@ -123,6 +123,6 @@ class TennisGameSpec extends ObjectBehavior
         $this->player2->winpoint();
         $this->player2->winpoint();
         $this->player2->winpoint();
-        $this->score()->shouldReturn("Avatatge Pepe");
+        $this->score()->shouldReturn("Avantatge Pepe");
     }
 }
