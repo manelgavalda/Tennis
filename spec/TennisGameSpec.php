@@ -55,6 +55,12 @@ class TennisGameSpec extends ObjectBehavior
         $this->score()->shouldReturn("15 - 40");
     }
 
+    function it_score_30_0(){
+        $this->player1->winpoint();
+        $this->player1->winpoint();
+        $this->score()->shouldReturn("30 - 0");
+    }
+
     function it_score_30_15(){
         $this->player1->winpoint();
         $this->player1->winpoint();
@@ -76,6 +82,13 @@ class TennisGameSpec extends ObjectBehavior
         $this->player2->winpoint();
         $this->player2->winpoint();
         $this->score()->shouldReturn("30 - 40");
+    }
+
+    function it_score_40_0(){
+        $this->player1->winpoint();
+        $this->player1->winpoint();
+        $this->player1->winpoint();
+        $this->score()->shouldReturn("40 - 0");
     }
 
     function it_score_40_15(){
@@ -125,4 +138,17 @@ class TennisGameSpec extends ObjectBehavior
         $this->player2->winpoint();
         $this->score()->shouldReturn("Avantatge Pepe");
     }
+
+    function it_score_iguals(){
+        $this->player1->winpoint();
+        $this->player1->winpoint();
+        $this->player1->winpoint();
+        $this->player1->winpoint();
+        $this->player2->winpoint();
+        $this->player2->winpoint();
+        $this->player2->winpoint();
+        $this->player2->winpoint();
+        $this->score()->shouldReturn("Iguals");
+    }
+
 }
