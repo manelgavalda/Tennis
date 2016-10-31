@@ -151,4 +151,28 @@ class TennisGameSpec extends ObjectBehavior
         $this->score()->shouldReturn("Iguals");
     }
 
+    function it_player1_win(){
+        $this->player1->winpoint();
+        $this->player1->winpoint();
+        $this->player1->winpoint();
+        $this->player1->winpoint();
+        $this->player1->winpoint();
+        $this->player2->winpoint();
+        $this->player2->winpoint();
+        $this->player2->winpoint();
+        $this->score()->shouldReturn("Maria guanya");
+    }
+
+    function it_player2_win(){
+        $this->player1->winpoint();
+        $this->player1->winpoint();
+        $this->player1->winpoint();
+        $this->player2->winpoint();
+        $this->player2->winpoint();
+        $this->player2->winpoint();
+        $this->player2->winpoint();
+        $this->player2->winpoint();
+        $this->score()->shouldReturn("Pepe guanya");
+    }
+
 }

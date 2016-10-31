@@ -35,17 +35,19 @@ class TennisGame
         }
             $playerwins = $this->player1;
 
-
         if ($diferencia<0) {
-            //player 2 guanya
             $playerwins = $this->player2;
         }
+        if ($diferencia == 2) {
+            return $this->player1->name() . " guanya";
+        }
+        if ($diferencia == -2) {
+            return $this->player2->name() . " guanya";
+        }
+
     return $this->scoreAvantatge($playerwins);
 
-
-
     }
-
 
     /**
      * @return bool
